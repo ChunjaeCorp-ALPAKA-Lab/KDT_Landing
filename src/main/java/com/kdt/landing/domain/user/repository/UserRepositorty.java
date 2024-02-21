@@ -2,8 +2,12 @@ package com.kdt.landing.domain.user.repository;
 
 import com.kdt.landing.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepositorty extends JpaRepository<User, String> {
+public interface UserRepositorty extends JpaRepository<User, Long> {
+    @Query("select u from User u where u.email = :email")
+    User getId(@Param("email") String email);
 }
