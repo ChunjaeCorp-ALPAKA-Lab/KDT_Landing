@@ -13,4 +13,6 @@ public interface UserRepositorty extends JpaRepository<User, Long> {
 
     @Query("select u from User u where u.pw = :pw")
     User getPassword(@Param("pw") String pw);
+
+    static boolean existsByEmail(String email);
 }
