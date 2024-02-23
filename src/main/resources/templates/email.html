@@ -2,17 +2,120 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <body>
-<div style="margin:100px;">
-    <h1> 안녕하세요.</h1>
-    <h1> 개발자를 위한 면접 준비 플랫폼 SAVIEW 입니다.</h1>
-    <br>
-    <p> 아래 코드를 회원가입 창으로 돌아가 입력해주세요.</p>
-    <br>
 
-    <div align="center" style="border:1px solid black; font-family:verdana;">
-        <h3 style="color:blue"> 회원가입 인증 코드 입니다. </h3>
-        <div style="font-size:130%" th:text="${code}"> </div>
-    </div>
+<div style="
+margin: 0;
+padding: 0;
+font-style: normal;
+font-family: Noto Sans CJK KR, Apple SD Gothic Neo, serif;
+background-color: #fff;
+color: #222;
+">
+    <table style="
+margin: 20px auto;
+text-align: left;
+border-collapse: collapse;
+border: 0;
+width: 640px;
+font-size: 14px;
+line-height: 1.5;
+">
+        <thead>
+        <tr>
+            <th style="text-align: left;">
+                <a target="_blank" href="https://zero-base.co.kr" style="display: inline-block; vertical-align: top;"><img src="https://storage.googleapis.com/static.fastcampus.co.kr/prod/assets/img/zero-base.png" alt="zero-base" style="height: 35px;"></a>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <table style="border-spacing: 0; border-collapse: collapse; width: 100%">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h2 style="margin: 16px 0; font-size: 20px">
+                                <strong style="text-decoration: underline">고객</strong>님, 안녕하세요.
+                            </h2>
+                            <p style="font-size: 14px">
+                                <em style="color: #3e69ff; font-style: normal; font-weight: bold">제로베이스</em>와 함께해주셔서
+                                감사합니다.<br>
+                                사이트에서 인증번호를 입력해주세요.<br>
+                                감사합니다.
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 48px 16px">
+                <table style="
+border-spacing: 0;
+border-collapse: collapse;
+margin: 0;
+padding: 0;
+min-width: 100%;
+background-color: #f5f5f5;
+">
+                    <colgroup>
+                        <col width="150">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <h3 style="color:blue"> 회원가입 인증 코드 입니다. </h3>
+                        <div style="font-size:130%" th:text="${code}"> </div>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0">
+                <a href="https://zero-base.co.kr" style="
+display: block;
+padding: 8px 0;
+text-align: center;
+text-decoration: none;
+border: 0 solid #3e69ff;
+color: #fff;
+background-color: #3e69ff;
+width: 100%;
+border-radius: 5px;
+" target="_blank">홈페이지로 이동하기</a>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td style="padding-top: 40px" colspan="2">
+                <p style="margin: 0; padding: 14px 16px; background: #f8f8fa; color: #9b9ba0; font-size: 12px">
+<span style="display: block; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #e6e8eb">
+본 메일은 발신전용으로 회신되지 않습니다. <br>
+문의사항이 있으시면 고객 센터를 이용해주시기 바랍니다.
+</span>
+                    <span style="display: inline-block; color: #3e69ff">
+<b style="margin-right: 6px; color: #9b9ba0">전화 문의</b>
+02-517-0647
+</span>
+                    <span style="display: inline-block; margin-left: 26px">
+<b style="margin-right: 6px; color: #9b9ba0">메일 문의</b>
+<u>
+<a target="_blank" href="mailto:help@zero-base.co.kr" style="color: #3e69ff"> help@zero-base.co.kr </a>
+</u>
+</span>
+                    <span style="display: block; margin-top: 10px; color: #9b9ba0">
+<b style="margin-right: 6px">전화 문의</b>
+평일 11:00~18:00 (주말 및 공휴일 제외/ 점심시간 12:00~13:00)
+</span>
+                </p>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    <table style="display:none"><tbody><tr><td><img src="https://email-track.ncloud.com/received/v2/MjAyNDAyMjMwMDAwMzY5OTQ1MDQ7MTAxNjs7ZGh4b2duczkyMEBjaHVuamFlLmNvLmty.gif" width="0" height="0" border="0" style=""></td></tr></tbody></table></div>
     <br/>
 </div>
 
