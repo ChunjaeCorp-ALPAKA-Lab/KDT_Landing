@@ -3,6 +3,7 @@ package com.kdt.landing.domain.user.entity;
 import com.kdt.landing.global.cosntant.BaseEntity;
 import com.kdt.landing.global.cosntant.Role;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 import java.util.HashSet;
@@ -22,11 +23,13 @@ public class Member extends BaseEntity {
 
     private String pw;
 
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     private String nickname;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String email;
 
     private int active;
