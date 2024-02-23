@@ -23,7 +23,7 @@ public class EmailController {
     public ResponseEntity sendJoinMail(@RequestBody EmailPost emailPost) {
         EmailMessage emailMessage = EmailMessage.builder()
                 .to(emailPost.getEmail())
-                .subject("[SAVIEW] 이메일 인증을 위한 인증 코드 발송")
+                .subject("[천재IT교육센터] 이메일 인증을 위한 인증 코드 발송")
                 .build();
 
         String code = emailService.joinSendMail(emailMessage, "email");
