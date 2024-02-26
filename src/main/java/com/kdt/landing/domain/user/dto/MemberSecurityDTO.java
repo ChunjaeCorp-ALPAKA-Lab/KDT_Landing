@@ -14,13 +14,13 @@ import java.util.Map;
 @ToString
 public class MemberSecurityDTO extends User {
 
-    private int id;
+    private Long id;
     private String pw;
     private String name;
     private String email;
     private int active;
     private Map<String, Object> props; //소셜 로그인 정보
-    public MemberSecurityDTO(int id, String password, String name, String username, int active,
+    public MemberSecurityDTO(Long id, String password, String name, String username, int active,
                              Collection<? extends GrantedAuthority> authorities) {
         super(String.valueOf(id), password, authorities);
         this.id = id;
