@@ -68,7 +68,7 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public void changePw(MemberJoinDTO memberJoinDTO) {
 
-        Optional<Member> result = memberRepository.findById(String.valueOf(memberJoinDTO.getId()));
+        Optional<Member> result = memberRepository.findById(Long.valueOf(memberJoinDTO.getId()));
         Member member = result.orElseThrow();
         member.changePassword(passwordEncoder.encode(memberJoinDTO.getPw()));
         memberRepository.save(member);
