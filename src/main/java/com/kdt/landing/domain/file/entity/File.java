@@ -26,7 +26,7 @@ public class File {
     private String fileName;
 
     @Builder
-    public File(Long id, String originFileName, String filePath, String fileName) {
+    public File(Long id, String originFileName, String fileName, String filePath) {
         this.id = id;
         this.originFileName = originFileName;
         this.filePath = filePath;
