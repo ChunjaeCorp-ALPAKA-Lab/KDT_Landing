@@ -1,35 +1,56 @@
 package com.kdt.landing.domain.board.entity;
 
 import com.kdt.landing.global.cosntant.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Getter
+@Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class Board extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    private Long boardIdx;
+    @Column(length = 500, nullable = false)
+    private String title;
 
-    @NotNull
-    private String originFileName;
+    @Column(length = 2000, nullable = false)
+    private String content;
 
-    @NotNull
-    private String storedFileName;
+    private String boardType;
 
-    private Long fileSize;
+    @Column
+    private Long fileId;
+
+    //    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "id")
+//    private Member member;
+    private String writer;
+
+    public void create(String title, String content, String writer) {
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+    }
+
+    public void change(String title, String content) {
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.fileId = fileId;
+    }
+
+    @Builder
+    public Board(Long id, String title, String content, String writer, Long fileId) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+        this.fileId = fileId;
+    }
 }
