@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
-public interface MemberRepository extends JpaRepository<Member, String> {
+public interface MemberRepository extends JpaRepository<Member, Long> {
 
     @EntityGraph(attributePaths = "roleSet")
     @Query("select m from Member m where m.email = :email")
@@ -21,10 +21,10 @@ public interface MemberRepository extends JpaRepository<Member, String> {
     @Modifying
     @Transactional
     @Query("update Member m set m.pw =:pw where m.id = :id ")
-    void updatePassword(@Param("pw") String password, @Param("id") String id);
+    void updatePassword(@Param("pw") String password, @Param("id") Long id);
 
     @Query("select m from Member m where m.id =:id")
-    Member findByMid(@Param("id") String id);
+    Member findById(@Param("id") String id);
 
 
     @Query("select m from Member m where m.email =:email")
